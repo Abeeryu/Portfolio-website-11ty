@@ -1,0 +1,130 @@
+/* ----------------------------- */
+/* CONTENT SECTIONS / PAGES */
+/* ----------------------------- */
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    position: relative;
+    text-align: center;
+    background: #f4f6fa;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(30,58,138,0.05);
+}
+
+/* Floating blobs for content sections */
+.content::before, .content::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(59,130,246,0.08);
+    z-index: 0;
+}
+
+.content::before {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+    left: -60px;
+    animation: float 7s ease-in-out infinite alternate;
+}
+
+.content::after {
+    width: 200px;
+    height: 200px;
+    bottom: -60px;
+    right: -40px;
+    animation: float 9s ease-in-out infinite alternate-reverse;
+}
+
+/* Headings */
+.content h2, .content h3 {
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.content h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #3b82f6;
+    margin: 0.5rem auto 1.5rem;
+    border-radius: 2px;
+}
+
+/* Paragraphs */
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Links */
+.content a {
+    color: #3b82f6;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.content a:hover {
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+
+/* Lists */
+.content ul, .content ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    text-align: left;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+/* Buttons inside content */
+.content .btn-hover a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3b82f6;
+    padding: 0.7rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(59,130,246,0.2);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.content .btn-hover a:hover {
+    background-color: #5a5adf;
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(59,130,246,0.3);
+}
+
+/* Images inside content */
+.content img {
+    max-width: 500px; /* increased from 300px */
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 2rem auto;
+    display: block;
+    box-shadow: 0 8px 20px rgba(30,58,138,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Reuse floating animation for blobs */
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(20px) rotate(20deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}

@@ -2,24 +2,26 @@ document.documentElement.classList.add("has-js");
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const title = document.querySelector(".big-title");
-    const text = document.querySelector(".small-text");
     const hero = document.querySelector(".hero");
+
+    // Animate both .small-text and the button together
+    const animItems = hero.querySelectorAll(".small-text, .btn-hover");
 
     document.addEventListener("scroll", () => {
         const rect = hero.getBoundingClientRect();
         const progress = Math.min(Math.max(-rect.top / hero.offsetHeight, 0), 1);
 
-        // Titel verkleinen
-        const startSize = 8;
-        const endSize = 3;
+        // Title scales and fades
+        const startSize = 12;
+        const endSize = 4;
         const currentSize = startSize - (startSize - endSize) * progress;
         title.style.fontSize = currentSize + "rem";
-
-        // Titel fade-out
         title.style.opacity = 1 - progress * 0.6;
 
-        // Kleine tekst fade-in
-        text.style.opacity = progress;
-        text.style.transform = `translateY(${20 - 20 * progress}px)`;
+        // Animate small-text and button together
+        animItems.forEach(item => {
+            item.style.opacity = progress;
+            item.style.transform = `translateY(${20 - 20 * progress}px)`;
+        });
     });
 }
