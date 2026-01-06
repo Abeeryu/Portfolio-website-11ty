@@ -5,26 +5,25 @@ layout: base.njk
 
 <div class="content about-container">
 
-## About Me
+  <h2>About Me</h2>
 
-![Abeer](/images/abeer.jpg)
+  <img src="/images/abeer.jpg" alt="Abeer" />
 
-Hi, I’m **Abeer** 👋  
-I design and build calm, accessible, and creative websites using modern web tools.
+  <p>
+    Hi, I’m <strong>Abeer</strong> 👋  
+    I’m a passionate <strong>Frontend Developer</strong> who combines creativity and technical expertise to build visually appealing, user-friendly web applications. I excel at translating complex <strong>UI/UX designs</strong> into responsive, accessible, and high-performance interfaces using <strong>HTML, CSS, JavaScript</strong>, and modern frameworks like <strong>Svelte, Vue, Next.js, 11ty</strong>.
+  </p>
 
-I enjoy working with **Eleventy**, CSS animations, and thoughtful UI design.  
+  <p>
+    I focus on creating digital experiences that delight users and improve engagement. In my projects, I’ve enhanced user interaction and optimized performance through thoughtful coding and attention to detail. I enjoy collaborating closely with designers and developers to craft innovative, intuitive, and inclusive web experiences.
+  </p>
 
-I love creating websites that feel calm, intuitive, and enjoyable to use.
-
-## Skills & Interests
-
-- **Eleventy** & static site development  
-- Modern **CSS** & animations  
-- Thoughtful **UI/UX design**  
-- Accessibility & inclusive design  
-
-## Fun Fact
-
-When I’m not coding, I enjoy experimenting with CSS animations, exploring new design trends, and sipping a good cup of coffee while planning my next project.
+  <h3>Skills & Interests</h3>
+  <ul>
+    <li><strong>Frontend Development</strong>: HTML, CSS, JavaScript, Svelte, Vue, Next.js, 11ty</li>
+    <li><strong>Design & UX</strong>: Translating Figma/Sketch designs into responsive code</li>
+    <li><strong>Performance & Accessibility</strong>: Optimizing websites for speed and usability</li>
+    <li>Thoughtful <strong>UI/UX Design</strong></li>
+  </ul>
 
 </div>
