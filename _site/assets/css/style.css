@@ -102,7 +102,7 @@ html {
     padding: 2rem;
     background: linear-gradient(135deg, #c7d7ff, #f4f6fa);
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     text-align: center;
 }
 
@@ -133,13 +133,15 @@ html {
 
 /* Big title */
 .hero .big-title {
-    font-size: 4rem;
+    /* font-size: 4rem; */
     font-weight: 900;
     color: #1e3a8a;
     margin: 0;
     z-index: 1;
     text-shadow: 1px 1px 8px rgba(30,58,138,0.1);
-    animation: big-title-pulse 4s ease-in-out infinite alternate;
+    span {
+        animation: big-title-pulse 4s ease-in-out infinite alternate;
+    }
 }
 
 /* Small text */
